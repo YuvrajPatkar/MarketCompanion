@@ -5,13 +5,19 @@
 //  Created by Yuvraj Rahul Patkar on 10/03/2025.
 //
 
-import Testing
+
+import XCTest
 @testable import MarketCompanion
 
-struct MarketCompanionTests {
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+
+final class MarketCompanionTests: XCTestCase {
+
+    func testRoundedFunction() {
+        let expectation = String(234.24)
+        let result = rounded(input: 234.2385)
+
+        XCTAssertEqual(result, expectation)
     }
-
 }
+
